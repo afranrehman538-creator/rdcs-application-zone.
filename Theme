@@ -1,0 +1,107 @@
+/* Hacker Theme Base */
+body {
+    background-color: #0a0000;
+    color: #ff3333;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Red Glow Effect Container */
+.container {
+    background: rgba(20, 0, 0, 0.9);
+    padding: 30px;
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 15px #ff0000;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animated Logo */
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: pulse 2s infinite;
+}
+
+h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background: #1a0000;
+    border: 1px solid #ff4444;
+    color: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus {
+    box-shadow: 0 0 8px #ff0000;
+}
+
+/* Cyber Button */
+.glow-button {
+    width: 100%;
+    padding: 15px;
+    background: #440000;
+    color: white;
+    border: 1px solid #ff0000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+
+.glow-button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+    color: black;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Scanline Effect for Hacker Look */
+.scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(255, 0, 0, 0.05) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.02));
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    z-index: 10;
+}
